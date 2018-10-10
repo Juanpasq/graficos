@@ -28,8 +28,12 @@
 
 
     <script>
+        
         $(function() {
-
+            
+            var a;
+            var b;
+            
             window.chart1 = new Highcharts.Chart({
 
                 chart: {
@@ -43,7 +47,7 @@
                 },
 
                 xAxis: {
-                    categories: ['Customer A']
+                    categories: ['GEN APOE']
                 },
 
 
@@ -58,56 +62,57 @@
                 },
 
                 series: [{
-                        name: 'Task 1',
+                    
+                        name: 'Total % (100%)',
                         stack: 'Tasks',
                         data: [{
+                            
                             x: 0,
-                            low: 7,
-                            high: 8
-                        }, {
-                            x: 1,
-                            low: 6.5,
-                            high: 7.5
-                        }]
-                    },
+                            low: a,
+                            high: b
+                        }, 
+                        
+                        // x = a la linea horiz a donde generas los graficos. Cada TASK tiene un color.
+                        /*{  
+                            x: 0,
+                            low: 65000,
+                            high: 75000
+                        }*/
+                        ]},
                     {
-                        name: 'Task 3',
+                        name: 'Coverage 1',
                         stack: 'Tasks',
                         data: [{
+                            
                             x: 0,
-                            low: 10,
-                            high: 14
-                        }, {
-                            x: 0,
-                            low: 6.5,
-                            high: 7.5
-                        }]
+                            low: 40000,
+                            high: 50000
+                        }],
+                    
                     },
 
                     { 
-                        name: 'Task 2',
+                        name: 'Coverage 2',
                         stack: 'Tasks',
                         data: [{
-                                x: 2,
-                                low: 8,
-                                high: 9
-                            }, {
-                                x: 1,
-                                low: 7.5,
-                                high: 8.5
-                            },
-                            {
-                                x: 1,
-                                low: 27.5,
-                                high: 30.5
-                            },
-                            {
-                                x: 1,
-                                low: 17.5,
-                                high: 18.5
-                            }
-                        ]
+                            
+                                x: 0,
+                                low: 55555,
+                                high: 67898
+                        }], 
+                    },
+                         
+                    { 
+                        name: 'Coverage 3',
+                        stack: 'Tasks',
+                        data: [{
+                            
+                                x: 0,
+                                low: 70000,
+                                high: 76000
+                        }], 
                     }
+                    
                 ]
 
             });
